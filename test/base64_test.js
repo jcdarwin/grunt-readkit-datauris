@@ -34,7 +34,9 @@ exports.base64 = {
       raw = grunt.file.read('test/fixtures/text', {
         encoding: null
       }).toString('hex'),
-      decoded = new Buffer(grunt.file.read('tmp/text.b64'), 'base64').toString('hex');
+      content = grunt.file.read('tmp/text.b64'),
+      // "var files = {'test/fixtures/text': 'VGhpcyBpcyBzb21lIHRleHQuCg=='};"
+      decoded = new Buffer((content.match(/[^\:]+\: '([^']*)'/)[1]), 'base64').toString('hex');
 
     
     test.equal(decoded, raw, 'the text file should be base64 encoded');
@@ -47,7 +49,9 @@ exports.base64 = {
         encoding: null
       }).toString('hex'),
       rawWords = raw.match(/.{1,4}/g),
-      decoded = new Buffer(grunt.file.read('tmp/tiny.mp4.b64'), 'base64').toString('hex'),
+      content = grunt.file.read('tmp/tiny.mp4.b64'),
+      // "var files = {'test/fixtures/text': 'VGhpcyBpcyBzb21lIHRleHQuCg=='};"
+      decoded = new Buffer((content.match(/[^\:]+\: '([^']*)'/)[1]), 'base64').toString('hex'),
       decodedWords = decoded.match(/.{1,4}/g),
       i = rawWords.length;
     

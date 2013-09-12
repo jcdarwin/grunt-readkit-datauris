@@ -1,23 +1,23 @@
 {
-  "name": "grunt-base64",
-  "description": "Base64 encode files.",
+  "name": "grunt-readkit-datauris",
+  "description": "Adaptation of grunt-base64 plugin, for use with Readk.it to assemble a file of data URIs representing EPUB content.",
   "version": "0.1.0",
-  "homepage": "https://github.com/BrightcoveOS/grunt-base64",
+  "homepage": "https://github.com/jcdarwin/grunt-readkit-datauris",
   "author": {
-    "name": "David LaPalomento",
-    "email": "dlapalomento@brightcove.com"
+    "name": "Jason Darwin",
+    "email": "jcdarwin@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/BrightcoveOS/grunt-base64.git"
+    "url": "git://github.com/jcdarwin/grunt-readkit-datauris.git"
   },
   "bugs": {
-    "url": "https://github.com/BrightcoveOS/grunt-base64/issues"
+    "url": "https://github.com/jcdarwin/grunt-readkit-datauris/issues"
   },
   "licenses": [
     {
       "type": "Apache 2.0",
-      "url": "https://github.com/BrightcoveOS/grunt-base64/blob/master/LICENSE.md"
+      "url": "https://github.com/jcdarwin/grunt-readkit-datauris/blob/master/LICENSE.md"
     }
   ],
   "main": "Gruntfile.js",
@@ -31,12 +31,16 @@
     "grunt-contrib-jshint": "~0.1.1",
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-nodeunit": "~0.1.2",
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.1",
+    "mime": "~1.2.9"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
   },
   "keywords": [
     "gruntplugin"
-  ]
+  ],
+  "readmeFilename": "README.md",
+  "_id": "grunt-readkit-datauris@0.1.0",
+  "_from": "grunt-readkit-datauris"
 }

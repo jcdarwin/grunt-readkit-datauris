@@ -1,9 +1,6 @@
 /*
- * grunt-base64
- * https://github.com/BrightcoveOS/grunt-base64
+ * grunt-readkit_datauris
  *
- * Copyright (c) 2013 Brightcove
- * Licensed under the Apache 2.0 licenses.
  */
 
 'use strict';
@@ -29,7 +26,7 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    base64: {
+    datauris: {
       text: {
         files: {
           'tmp/text.b64': 'test/fixtures/text'
@@ -59,7 +56,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'base64', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'datauris', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
